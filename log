@@ -120,3 +120,24 @@ list.c:86:9: error: ‘lista’ undeclared (first use in this function); did you
       |         ^~~~~
       |         list
 4a95b8d
+Fri Mar 27 06:02:51 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:79:20: error: too few arguments to function ‘createNode’
+   79 |     Node * nuevo = createNode();
+      |                    ^~~~~~~~~~
+list.c:25:8: note: declared here
+   25 | Node * createNode(void * data) {
+      |        ^~~~~~~~~~
+list.c:84:27: error: ‘List’ {aka ‘struct List’} has no member named ‘list’
+   84 |         nuevo->prev = list->list->current->next;
+      |                           ^~
+list.c:86:9: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   86 |         lista->current = nuevo;
+      |         ^~~~~
+      |         list
+list.c:86:9: note: each undeclared identifier is reported only once for each function it appears in
+ecf6b4a
