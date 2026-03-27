@@ -80,6 +80,7 @@ void pushCurrent(List * list, void * data) {
     if (list == NULL){
         list->head = nuevo;
         list->current = nuevo;
+        list->tail = nuevo;
     }
     else{
         if(list->current == list ->tail){
