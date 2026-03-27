@@ -6,3 +6,40 @@ Fri Mar 27 05:37:51 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 5ae06f9
+Fri Mar 27 06:01:27 PM UTC 2026: 
+ list.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:79:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   79 |     Nodo *nuevo = createNode()
+      |     ^~~~
+      |     Node
+list.c:79:19: error: too few arguments to function ‘createNode’
+   79 |     Nodo *nuevo = createNode()
+      |                   ^~~~~~~~~~
+list.c:25:8: note: declared here
+   25 | Node * createNode(void * data) {
+      |        ^~~~~~~~~~
+list.c:80:5: error: expected ‘,’ or ‘;’ before ‘if’
+   80 |     if (list == NUll){
+      |     ^~
+list.c:83:5: error: ‘else’ without a previous ‘if’
+   83 |     else{
+      |     ^~~~
+list.c:84:14: error: request for member ‘prev’ in something not a structure or union
+   84 |         nuevo->prev = list->list->current->next;
+      |              ^~
+list.c:84:27: error: ‘List’ {aka ‘struct List’} has no member named ‘list’
+   84 |         nuevo->prev = list->list->current->next;
+      |                           ^~
+list.c:85:35: error: request for member ‘prev’ in something not a structure or union
+   85 |         list->current->next= nuevo->prev;
+      |                                   ^~
+list.c:86:9: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   86 |         lista->current = nuevo;
+      |         ^~~~~
+      |         list
+list.c:86:9: note: each undeclared identifier is reported only once for each function it appears in
+367281b
