@@ -159,3 +159,25 @@ list.c:86:9: error: ‘lista’ undeclared (first use in this function); did you
       |         list
 list.c:86:9: note: each undeclared identifier is reported only once for each function it appears in
 2d0ccff
+Fri Mar 27 06:04:00 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:79:20: error: too few arguments to function ‘createNode’
+   79 |     void * nuevo = createNode();
+      |                    ^~~~~~~~~~
+list.c:25:8: note: declared here
+   25 | Node * createNode(void * data) {
+      |        ^~~~~~~~~~
+list.c:84:14: error: dereferencing ‘void *’ pointer [-Werror]
+   84 |         nuevo->prev = list->current->next;
+      |              ^~
+list.c:84:14: error: request for member ‘prev’ in something not a structure or union
+list.c:85:35: error: dereferencing ‘void *’ pointer [-Werror]
+   85 |         list->current->next= nuevo->prev;
+      |                                   ^~
+list.c:85:35: error: request for member ‘prev’ in something not a structure or union
+cc1: all warnings being treated as errors
+72bed59
