@@ -194,3 +194,14 @@ list.c:25:8: note: declared here
    25 | Node * createNode(void * data) {
       |        ^~~~~~~~~~
 f198ee4
+Fri Mar 27 06:06:36 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:79:19: error: too few arguments to function ‘createNode’
+   79 |     Node* nuevo = createNode();
+      |                   ^~~~~~~~~~
+list.c:25:8: note: declared here
+   25 | Node * createNode(void * data) {
+      |        ^~~~~~~~~~
+6a4cca2
