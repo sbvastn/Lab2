@@ -250,3 +250,9 @@ list.c:97:25: error: assignment to ‘Node *’ from incompatible pointer type �
    97 |             nuevo->prev = der;
       |                         ^
 7ba5cbe
+Fri Mar 27 06:23:39 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/60
+5cb542e
