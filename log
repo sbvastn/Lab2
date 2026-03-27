@@ -217,3 +217,36 @@ Fri Mar 27 06:09:51 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 186d05d
+Fri Mar 27 06:23:17 PM UTC 2026: 
+ list.c | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:92:13: error: unknown type name ‘node’; did you mean ‘Node’?
+   92 |             node* der = list->current;
+      |             ^~~~
+      |             Node
+list.c:92:25: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   92 |             node* der = list->current;
+      |                         ^~~~
+list.c:93:13: error: unknown type name ‘node’; did you mean ‘Node’?
+   93 |             node* izq = list->current->next;
+      |             ^~~~
+      |             Node
+list.c:93:25: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   93 |             node* izq = list->current->next;
+      |                         ^~~~
+list.c:94:16: error: request for member ‘next’ in something not a structure or union
+   94 |             der->next = nuevo;
+      |                ^~
+list.c:95:16: error: request for member ‘prev’ in something not a structure or union
+   95 |             izq->prev = nuevo;
+      |                ^~
+list.c:96:25: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   96 |             nuevo->next = izq;
+      |                         ^
+list.c:97:25: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   97 |             nuevo->prev = der;
+      |                         ^
+7ba5cbe
