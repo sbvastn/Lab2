@@ -47,13 +47,13 @@ List * createList() {
 void * firstList(List * list) {
     void* elemento = list->head;
     list->current = elemento;
-    return *elemento;
+    return elemento;
 }
 
 void * nextList(List * list) {
     void* elemento = list->current->next;
     list->current = elemento;
-    return *elemento;
+    return elemento;
 }
 
 // 3. Programe las funciones void * lastList(List * list) y void * prevList(List * list).
