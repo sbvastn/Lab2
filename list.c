@@ -97,9 +97,11 @@ void pushFront(List * list, void * data) {
     Node* aux = list->head;
     list->head = nuevo;
     nuevo->next = aux;
-    aux->prev = nuevo;
+    if (aux != NULL){
+        aux->prev = nuevo;
+    }
+    else list->tail = nuevo;
     list->current = nuevo;
-    return;
 }
 
 void pushBack(List * list, void * data) {
