@@ -274,3 +274,15 @@ Sat Mar 28 03:02:59 PM UTC 2026:
  tests:  2|4
 total_score: 20/60
 1bfad61
+Sat Mar 28 03:06:42 PM UTC 2026: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:48:22: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   48 |     void* elemento = lista->head;
+      |                      ^~~~~
+      |                      list
+list.c:48:22: note: each undeclared identifier is reported only once for each function it appears in
+e78e61c
