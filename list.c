@@ -160,6 +160,7 @@ void * popCurrent(List * list) {
         Node* der = list->current->next;
         der->prev = list->current->prev;
     }
+    return list->current->data;
     
 }
 
