@@ -155,6 +155,7 @@ void * popCurrent(List * list) {
         Node* izq = list->current->prev;
         izq->next = list->current->next;
     }
+    else list->head = list->current->next;
     if(list->current->next != NULL){
         Node* der = list->current->next;
         der->prev = list->current->prev;
