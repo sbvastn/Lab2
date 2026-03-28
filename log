@@ -323,3 +323,14 @@ Sat Mar 28 03:09:07 PM UTC 2026:
  tests:  2|4
 total_score: 20/60
 bd5252d
+Sat Mar 28 03:11:54 PM UTC 2026: 
+ list.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:48:21: error: ‘elemento’ undeclared (first use in this function)
+   48 |     list->current = elemento;
+      |                     ^~~~~~~~
+list.c:48:21: note: each undeclared identifier is reported only once for each function it appears in
+83407fe
