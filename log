@@ -366,3 +366,21 @@ Sat Mar 28 03:36:43 PM UTC 2026:
  tests:  10|2
 total_score: 40/60
 33a06ff
+Sat Mar 28 03:45:25 PM UTC 2026: 
+ list.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:100:8: error: dereferencing ‘void *’ pointer [-Werror]
+  100 |     aux->prev = nuevo;
+      |        ^~
+list.c:100:8: error: request for member ‘prev’ in something not a structure or union
+list.c:102:25: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  102 |     return list->current->data;
+      |            ~~~~~~~~~~~~~^~~~~~
+list.c:95:6: note: declared here
+   95 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+14afe5d
