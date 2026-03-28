@@ -286,3 +286,9 @@ list.c:48:22: error: ‘lista’ undeclared (first use in this function); did yo
       |                      list
 list.c:48:22: note: each undeclared identifier is reported only once for each function it appears in
 e78e61c
+Sat Mar 28 03:06:58 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  2|4
+total_score: 20/60
+cd39897
