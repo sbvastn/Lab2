@@ -162,6 +162,7 @@ void * popCurrent(List * list) {
         aux->next->prev = aux->prev;
         list->current = aux->next; 
     } else {
+        list->tail = aux->prev;
         list->current = aux->prev;
     }
     return data;
